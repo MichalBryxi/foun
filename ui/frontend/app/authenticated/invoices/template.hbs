@@ -1,0 +1,9 @@
+<DataGrid
+  @columns={{this.columns}}
+  @rows={{this.rows}}
+  @onSelect={{fn (mut this.selection)}}
+  @selection={{this.selection}}
+  as |dg|
+>
+  <dg.Table />
+</DataGrid>

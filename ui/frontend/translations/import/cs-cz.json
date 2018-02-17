@@ -1,0 +1,12 @@
+{
+  "import": {
+    "new": {
+      "error": {
+        "invoiceSave": "Nepodařilo se uložit fakturu",
+        "itemSave": "Nepodařilo se uložit nový záznam pro {phoneNumber}",
+        "accountNotFound": "Nepodařilo se najít účet pro {phoneNumber}",
+        "okCount": "Importováno {okCount} záznamů"
+      }
+    }
+  }
+}

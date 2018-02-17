@@ -1,0 +1,21 @@
+{{#let
+  (changeset this.model.newInvoice this.InvoiceValidations)
+  as |changeset|
+}}
+  <ChangesetForm
+    @onSubmit={{this.parseInvoice}}
+    @changeset={{changeset}}
+    class='grid gap-4'
+    as |Form|
+  >
+    <Form.Input
+      @label={{t 'model.invoice.date'}}
+      @fieldName='issuedAtString'
+      type='datetime-local'
+    />
+    <Form.Textarea @label={{t 'model.invoice.source'}} @fieldName='source' />
+    <Button @type='submit' @intent='primary' disabled={{changeset.isInvalid}}>
+      {{t 'submit'}}
+    </Button>
+  </ChangesetForm>
+{{/let}}

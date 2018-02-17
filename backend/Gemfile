@@ -1,0 +1,28 @@
+source 'https://rubygems.org'
+
+gem 'rails', '~> 7.0.4'
+gem 'pg'
+gem 'jsonapi-resources'
+gem 'devise'
+gem 'devise_token_auth'
+gem 'puma'
+
+gem 'rack-cors'
+gem 'awesome_nested_set'
+
+group :development, :test do
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+end
+
+group :development do
+  gem 'listen'
+  gem 'spring'
+  gem 'spring-watcher-listen'
+  gem 'rb-readline'
+  gem 'dotenv-rails'
+  gem 'pgreset'
+end
+
+# https://github.com/tzinfo/tzinfo/wiki/Resolving-TZInfo::DataSourceNotFound-Errors
+gem 'tzinfo-data'
+gem 'rails_12factor', group: [:staging, :production]

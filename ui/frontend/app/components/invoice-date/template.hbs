@@ -1,0 +1,8 @@
+<DatePicker @action={{action updateDate}} as |s|>
+  <div class='field'>
+    <label>{{t 'form.invoice.date'}}</label>
+    <button class='ui button' disabled='true' type='button'>
+      {{format-date selectedDate 'DD.MM.YYYY'}}
+    </button>
+  </div>
+</DatePicker>

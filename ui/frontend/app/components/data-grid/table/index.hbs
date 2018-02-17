@@ -1,0 +1,33 @@
+{{#if @rows}}
+  <EmberTable as |t|>
+    <t.head @columns={{@columns}} />
+
+    <t.body
+      @enableTree={{false}}
+      @rows={{@rows}}
+      @onSelect={{@onSelect}}
+      @selection={{@selection}}
+      as |b|
+    >
+      <b.row as |r|>
+        <r.cell as |cell column|>
+          {{#if column.cellComponent}}
+            {{#component column.cellComponent row=r column=column}}
+              {{#if column.valueFormatter}}
+                {{column.valueFormatter cell}}
+              {{else}}
+                {{cell}}
+              {{/if}}
+            {{/component}}
+          {{else}}
+            {{cell}}
+          {{/if}}
+        </r.cell>
+      </b.row>
+    </t.body>
+  </EmberTable>
+{{else}}
+  <div class='text-center'>
+    {{t 'empty'}}
+  </div>
+{{/if}}

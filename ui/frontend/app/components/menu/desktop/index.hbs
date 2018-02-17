@@ -1,0 +1,12 @@
+<div class='hidden md:ml-6 md:flex md:items-center md:space-x-4'>
+  {{! Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" }}
+  {{#each @menuItems as |item|}}
+    <LinkTo
+      @route={{item.route}}
+      class='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white'
+      @activeClass='bg-gray-900 text-white'
+    >
+      {{item.label}}
+    </LinkTo>
+  {{/each}}
+</div>

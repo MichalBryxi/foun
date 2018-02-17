@@ -1,0 +1,20 @@
+# Ignore version control files:
+.git/
+.gitignore
+
+# Ignore docker and environment files:
+*Dockerfile
+docker-compose*.yml
+.dockerignore
+
+# Ignore log files:
+log/*.log
+
+# Ignore temporary files:
+**/tmp
+**/dist
+**/node_modules
+**/bower_components
+
+# Ignore OS artifacts:
+**/.DS_Store

@@ -1,0 +1,13 @@
+{
+  "menu": {
+    "foun": "foun",
+    "foun.pudr.com": "foun.pudr.com",
+    "newInvoice": "Nová faktura",
+    "accounts": "Účty",
+    "invoices": "Faktury",
+    "login": "Přihlásit",
+    "logout": "Odhlásit",
+    "openMainMenu": "Otevřít hlavní menu",
+    "openUserMenu": "Otevřít menu uživatele"
+  }
+}

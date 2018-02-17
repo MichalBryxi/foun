@@ -1,0 +1,13 @@
+<div class='md:hidden' id='mobile-menu'>
+  <div class='space-y-1 px-2 pt-2 pb-3 sm:px-3'>
+    {{#each @menuItems as |item|}}
+      <LinkTo
+        @route={{item.route}}
+        class='block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white'
+        @activeClass='bg-gray-900 text-white'
+      >
+        {{item.label}}
+      </LinkTo>
+    {{/each}}
+  </div>
+</div>

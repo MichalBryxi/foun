@@ -1,0 +1,9 @@
+{
+  "invoice": {
+    "markPaid": "Zaplaceno",
+    "markNotPaid": "Nezaplaceno",
+    "sendEmail": "Odeslat e-mail",
+    "mailSentTo": "E-mail na {email} odleslán",
+    "mailFailed": "E-mail na {email} selhal"
+  }
+}

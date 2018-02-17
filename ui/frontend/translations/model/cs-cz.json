@@ -1,0 +1,24 @@
+{
+  "model": {
+    "account": {
+      "name": "Jméno",
+      "email": "E-mail",
+      "phoneNumber": "Telefonní číslo",
+      "accountNumber": "Číslo účtu"
+    },
+    "invoice": {
+      "date": "Datum",
+      "source": "Zdroj",
+      "price": "Částka",
+      "notificationCount": "Odeslaných emailů",
+      "descendantsOwe": "Dluh potomků",
+      "payUp": "Zaplatit nahoru",
+      "isPaid": "Zaplaceno",
+      "issuedAt": "Vystaveno"
+    },
+    "users": {
+      "identification": "E-mail",
+      "password": "Heslo"
+    }
+  }
+}

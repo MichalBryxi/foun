@@ -1,0 +1,34 @@
+version: '2'
+services:
+  db:
+    environment:
+      POSTGRES_PASSWORD: bluestaminauponreflection
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./.pgdb:/var/lib/postgresql/data
+  backend:
+    build:
+      context: .
+      dockerfile: ./docker/backend.Dockerfile
+    command: bundle exec rails s --port 3000 --binding 0.0.0.0 -P /dev/null
+    volumes:
+      - ./backend/:/myapp:cached
+    ports:
+      - "3000:3000"
+  # frontend:
+  #   privileged: true
+  #   build:
+  #     context: .
+  #     dockerfile: ./docker/frontend.Dockerfile
+  #   command: ember server --proxy http://backend:3000
+  #   volumes:
+  #     - ./frontend/:/myapp:cached
+  #     - /myapp/node_modules/
+  #     - /myapp/bower_components/
+  #     - /myapp/tmp/
+  #     - /myapp/dist/
+  #   ports:
+  #     - "4200:4200"
+  #     - "7020:7020"

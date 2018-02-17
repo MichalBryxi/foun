@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ember-table {
+  @apply inline-block min-w-full py-2 align-middle md:px-6 lg:px-8
+}
+
+/* CSS specificity trick to fix hardcoded styles of ember-table */
+div > .ember-table > .ember-table-overflow {
+  @apply overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg;
+}
+
+.ember-table > .ember-table-overflow > table {
+  @apply min-w-full divide-y divide-gray-300;
+}
+
+.ember-table thead {
+  @apply bg-gray-50;
+}
+
+.ember-table tr th {
+  @apply px-3 py-3.5 text-left text-sm font-semibold text-gray-900;
+}
+
+.ember-table tbody {
+  @apply divide-y divide-gray-200 bg-white;
+}
+
+.ember-table tbody td {
+  @apply whitespace-nowrap px-3 py-4 text-sm text-gray-500;
+}
+
+.ember-table .et-depth-indent {
+  @apply inline px-2;
+}
+
+.ember-table .et-cell-content {
+  @apply inline;
+}

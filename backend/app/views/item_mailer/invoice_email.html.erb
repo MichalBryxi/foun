@@ -1,0 +1,39 @@
+<h1 style="color: #174630"><%= @subject %></h1>
+
+<h2 style="color: #177d4d">Informace o platbě</h2>  
+
+<table width="100%" cellspacing="10">
+  <tbody>
+    <tr>
+      <th align="left">Celkem k zaplacení:</th>
+      <td align="right"><%= @item.pay_up %> Kč</td>
+    </tr>
+    <tr>
+      <th align="left">Číslo účtu:</th>
+      <td align="right"><%= @account_number %></td>
+    </tr>
+    <tr>
+      <th align="left">Variabilní symbol:</th>
+      <td align="right"><%= @variable_number %></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 style="color: #177d4d">Detaily</h2>
+
+<table width="100%" cellspacing="10">
+  <tbody>
+    <tr>
+      <th align="left">Váš dluh:</th>
+      <td align="right"><%= @item.price %> Kč</td>
+    </tr>
+    <tr>
+      <th align="left">Dluh těch pod vámi:</th>
+      <td align="right"><%= @item.descendants_owe %> Kč</td>
+    </tr>
+    <tr>
+      <th align="left">Jméno komu peníze posíláte:</th>
+      <td align="right"><%= @parent_name %></td>
+    </tr>
+  </tbody>
+</table>

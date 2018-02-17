@@ -1,0 +1,42 @@
+<div class='flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8'>
+  <div class='sm:mx-auto sm:w-full sm:max-w-md'>
+    <img
+      class='mx-auto h-12 w-auto'
+      src='/favicon.png'
+      alt={{t 'menu.foun.pudr.com'}}
+    />
+    <h2
+      class='mt-6 text-center text-3xl font-bold tracking-tight text-gray-900'
+    >{{t 'menu.foun.pudr.com'}}</h2>
+  </div>
+  <div class='mt-8 sm:mx-auto sm:w-full sm:max-w-md'>
+    <div class='bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10'>
+      {{#let (changeset this.model this.UserValidations) as |changeset|}}
+        <ChangesetForm
+          @onSubmit={{this.authenticate}}
+          @changeset={{changeset}}
+          class='grid gap-4'
+          as |Form|
+        >
+          <Form.Input
+            @label={{t 'model.users.identification'}}
+            @fieldName='identification'
+            type='email'
+          />
+          <Form.Input
+            @label={{t 'model.users.password'}}
+            @fieldName='password'
+            type='password'
+          />
+          <Button
+            @type='submit'
+            @intent='primary'
+            disabled={{changeset.isInvalid}}
+          >
+            {{t 'menu.login'}}
+          </Button>
+        </ChangesetForm>
+      {{/let}}
+    </div>
+  </div>
+</div>

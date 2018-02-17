@@ -1,0 +1,14 @@
+{{yield
+  (hash
+    ActionBar=(component
+      'data-grid/action-bar' selection=this.selection selectAll=this.selectAll
+    )
+    Table=(component
+      'data-grid/table'
+      columns=@columns
+      rows=@rows
+      onSelect=(fn (mut this.selection))
+      selection=this.selection
+    )
+  )
+}}
