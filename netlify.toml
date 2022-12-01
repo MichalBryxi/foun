@@ -1,4 +1,0 @@
-[build]
-  base = "ui/frontend/"
-  publish = "dist/"
-  command = "ember build --environment=production"
