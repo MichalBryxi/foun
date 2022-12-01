@@ -71,4 +71,4 @@ node_modules/
 /.vscode
 /.pgdb
 /backend/log/
-/.DS_Store
+/**/.DS_Store
