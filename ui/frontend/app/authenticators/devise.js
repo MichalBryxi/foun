@@ -1,8 +1,11 @@
 import Devise from 'ember-simple-auth/authenticators/devise';
 import { Promise } from 'rsvp';
 import { run } from '@ember/runloop';
+import config from '../config/environment';
 
 export default class DeviseAuthenticator extends Devise {
+  serverTokenEndpoint = `${config.APP.API_HOST}/users/sign_in`;
+
   authenticate(identification, password) {
     return new Promise((resolve, reject) => {
       const { identificationAttributeName, tokenAttributeName } = this;
