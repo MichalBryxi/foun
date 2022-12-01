@@ -5,6 +5,10 @@ module.exports = function (deployTarget) {
   let ENV = {
     build: {},
     // include other plugin configuration that applies to all deploy targets here
+    'netlify-cli': {
+      siteId: process.env.NETLIFY_SITE_ID,
+      authToken: process.env.NETLIFY_AUTH_TOKEN,
+    },
   };
 
   if (deployTarget === 'development') {
