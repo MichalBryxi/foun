@@ -86,5 +86,5 @@ railway shell
 ### Manual deployment of frontend
 
 ```sh
-NETLIFY_SITE_ID='xxx' NETLIFY_AUTH_TOKEN='yyy' ember deploy production
+API_HOST='https://foun-api.pudr.com' NETLIFY_SITE_ID='xxx' NETLIFY_AUTH_TOKEN='yyy' ember deploy production
 ```
