@@ -62,3 +62,23 @@ yarn start
 ```
 
 Application appears on [http://localhost:4200/](http://localhost:4200/).
+
+## Production
+
+Hosted on [railway](https://railway.app/)
+
+### Installation
+
+```sh
+brew install railwayapp/tap/nixpacks
+brew install railway
+brew login
+```
+
+### Database seed
+
+```sh
+railway shell
+# select "backend"
+> rails db:reset
+```
