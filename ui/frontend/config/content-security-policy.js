@@ -1,6 +1,6 @@
 module.exports = function () {
   return {
-    delivery: ['header'],
+    delivery: ['meta'],
     enabled: true,
     failTests: true,
     policy: {
