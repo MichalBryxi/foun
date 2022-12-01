@@ -7,6 +7,13 @@ default: &default
   password: bluestaminauponreflection
   host: db
 
+production:
+  <<: *default
+  database: <%= ENV.fetch("PGDATABASE") %>
+  username: <%= ENV.fetch("PGUSER") %>
+  password: <%= ENV.fetch("PGPASSWORD") %>
+  host: <%= ENV.fetch("PGHOST") %>
+
 development:
   <<: *default
   database: foun
