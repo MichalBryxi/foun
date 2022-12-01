@@ -82,3 +82,9 @@ railway shell
 # select "backend"
 > rails db:reset
 ```
+
+### Manual deployment of frontend
+
+```sh
+NETLIFY_SITE_ID='xxx' NETLIFY_AUTH_TOKEN='yyy' ember deploy production
+```
