@@ -2,3 +2,6 @@
   base = "ui/frontend"
   publish = "dist/"
   command = "yarn build"
+
+[context.production.environment]
+  API_HOST = "https://foun-api.pudr.com"
