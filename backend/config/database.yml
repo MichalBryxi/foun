@@ -3,16 +3,13 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
   encoding: unicode
-  username: postgres
-  password: bluestaminauponreflection
-  host: db
+  database: <%= ENV.fetch("PGDATABASE") { 'foun' } %>
+  username: <%= ENV.fetch("PGUSER") { 'postgres' } %>
+  password: <%= ENV.fetch("PGPASSWORD") { 'bluestaminauponreflection' } %>
+  host: <%= ENV.fetch("PGHOST") { 'db' } %>
 
 production:
   <<: *default
-  database: <%= ENV.fetch("PGDATABASE") %>
-  username: <%= ENV.fetch("PGUSER") %>
-  password: <%= ENV.fetch("PGPASSWORD") %>
-  host: <%= ENV.fetch("PGHOST") %>
 
 development:
   <<: *default

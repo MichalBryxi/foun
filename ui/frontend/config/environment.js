@@ -1,5 +1,7 @@
 'use strict';
 
+const API_HOST = process.env.API_HOST ?? '';
+
 module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'foun',
@@ -16,7 +18,17 @@ module.exports = function (environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-      API_HOST: process.env.API_HOST ?? '',
+      API_HOST,
+    },
+
+    'ember-simple-auth-token': {
+      serverTokenEndpoint: `${API_HOST}/users/sign_in`,
+
+      // jwt
+
+      tokenPropertyName: 'Authorization',
+      authorizationHeaderName: 'Authorization', // Header name added to each API request
+      authorizationPrefix: 'Bearer', // Prefix added to each API request
     },
   };
 
