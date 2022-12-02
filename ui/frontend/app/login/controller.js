@@ -28,9 +28,5 @@ export default class LoginController extends Controller {
       console.log({ error });
       this.notifications.add(error.error || error);
     }
-
-    if (this.session.isAuthenticated) {
-      this.router.transitionTo('authenticated.invoices');
-    }
   }
 }

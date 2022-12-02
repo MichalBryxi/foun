@@ -6,26 +6,31 @@ import config from '../config/environment';
 export default class DeviseAuthenticator extends Devise {
   serverTokenEndpoint = `${config.APP.API_HOST}/users/sign_in`;
 
+  // This defaults to 'token' and I have no clue why this is needed.
+  // But [this line](https://github.com/mainmatter/ember-simple-auth/blob/master/packages/ember-simple-auth/addon/authenticators/devise.js#L172) requests it.
+  tokenAttributeName = 'uid';
+
+  // Seems like devise-token-auth returns this format
+  resourceName = 'data';
+
+  routeAfterAuthentication = 'authenticated.invoices';
+
   authenticate(identification, password) {
     return new Promise((resolve, reject) => {
       const { identificationAttributeName, tokenAttributeName } = this;
       const data = {};
+      // TODO: Raise a ticket to _not_ require [resourceName](https://github.com/mainmatter/ember-simple-auth/blob/master/packages/ember-simple-auth/addon/authenticators/devise.js#L107)
       data['password'] = password;
       data[identificationAttributeName] = identification;
 
       this.makeRequest(data)
         .then((response) => {
           if (response.ok) {
-            response.json().then((responseJSON) => {
-              let json = {};
-
-              json['role'] = responseJSON.data.role;
-              json[identificationAttributeName] = response.headers.get('uid');
-              json[tokenAttributeName] = response.headers.get('access-token');
-              // TODO: This should go through config, but ember-simple-auth does not have respective field.
-              json['client'] = response.headers.get('client');
+            response.json().then((json) => {
               if (this._validate(json)) {
-                run(null, resolve, json);
+                const resourceName = this.resourceName;
+                const _json = json[resourceName] ? json[resourceName] : json;
+                run(null, resolve, _json);
               } else {
                 run(
                   null,
