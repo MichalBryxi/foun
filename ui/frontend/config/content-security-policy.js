@@ -5,10 +5,11 @@ module.exports = function () {
     failTests: true,
     policy: {
       'default-src': ["'none'"],
-      'script-src': ["'self'", "'unsafe-inline"],
+      'script-src': ["'self'", "'unsafe-inline'"],
       'font-src': ["'self'"],
+      'manifest-src': ["'self'"],
       'connect-src': ["'self'", 'https://foun-api.pudr.com'],
-      'img-src': ["'self'"],
+      'img-src': ["'self'", 'data:'],
       'style-src': ["'self'", "'unsafe-inline'"],
       'media-src': ["'self'"],
     },
