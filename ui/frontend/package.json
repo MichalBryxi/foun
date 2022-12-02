@@ -81,7 +81,10 @@
     "qunit": "^2.19.2",
     "qunit-dom": "^2.0.0",
     "tailwindcss": "^3.0.0",
-    "webpack": "^5.74.0"
+    "webpack": "^5.67.0",
+    "@embroider/core": "^1.0.0",
+    "@embroider/compat": "^1.0.0",
+    "@embroider/webpack": "^1.0.0"
   },
   "engines": {
     "node": "14.* || 16.* || >= 18"
