@@ -47,7 +47,6 @@
     "ember-cli-deploy": "^2.0.0",
     "ember-cli-deploy-build": "^2.0.0",
     "ember-cli-deploy-netlify-cli": "^2.0.0",
-    "ember-cli-deploy-revision-data": "^2.0.0",
     "ember-cli-favicon": "^3.0.0",
     "ember-cli-htmlbars": "^6.1.1",
     "ember-cli-inject-live-reload": "^2.1.0",
