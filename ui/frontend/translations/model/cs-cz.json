@@ -4,7 +4,8 @@
       "name": "Jméno",
       "email": "E-mail",
       "phoneNumber": "Telefonní číslo",
-      "accountNumber": "Číslo účtu"
+      "accountNumber": "Číslo účtu",
+      "parent": "Rodič"
     },
     "invoice": {
       "date": "Datum",

@@ -6,21 +6,21 @@
     as |Form|
   >
     <Form.Select
-      @label={{t 'form.account.parent'}}
+      @label={{t 'model.account.parent'}}
       @fieldName='parent'
       @options={{this.model.accounts}}
       as |option|
     >
       {{option.name}}
     </Form.Select>
-    <Form.Input @label={{t 'form.account.name'}} @fieldName='name' />
+    <Form.Input @label={{t 'model.account.name'}} @fieldName='name' />
     <Form.Input
-      @label={{t 'form.account.phoneNumber'}}
+      @label={{t 'model.account.phoneNumber'}}
       @fieldName='phoneNumber'
     />
-    <Form.Input @label={{t 'form.account.email'}} @fieldName='email' />
+    <Form.Input @label={{t 'model.account.email'}} @fieldName='email' />
     <Form.Input
-      @label={{t 'form.account.accountNumber'}}
+      @label={{t 'model.account.accountNumber'}}
       @fieldName='accountNumber'
     />
     <Button @type='submit' @intent='primary' disabled={{changeset.isInvalid}}>
