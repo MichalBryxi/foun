@@ -13,8 +13,6 @@ export default class DeviseAuthenticator extends Devise {
   // Seems like devise-token-auth returns this format
   resourceName = 'data';
 
-  routeAfterAuthentication = 'authenticated.invoices';
-
   authenticate(identification, password) {
     return new Promise((resolve, reject) => {
       const { identificationAttributeName, tokenAttributeName } = this;
