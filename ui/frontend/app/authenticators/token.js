@@ -7,6 +7,7 @@ export default class TokenAuthenticator extends Devise {
   serverTokenEndpoint = `${config.APP.API_HOST}/auth/sign_in`;
 
   tokenAttributeName = 'access-token';
+  identificationAttributeName = 'uid';
 
   authenticate(email, password) {
     return new Promise((resolve, reject) => {
@@ -19,10 +20,9 @@ export default class TokenAuthenticator extends Devise {
         .then((response) => {
           if (response.ok) {
             let json = {};
-            json['client'] = response.headers.get('client');
-            json['email'] = response.headers.get('uid');
-            json['uid'] = response.headers.get('uid');
             json['access-token'] = response.headers.get('access-token');
+            json['client'] = response.headers.get('client');
+            json['uid'] = response.headers.get('uid');
 
             if (this._validate(json)) {
               run(null, resolve, json);

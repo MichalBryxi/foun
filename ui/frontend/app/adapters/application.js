@@ -12,9 +12,7 @@ export default class ApplicationJSONAPIAdapter extends JSONAPIAdapter {
     if (this.session.isAuthenticated) {
       return {
         'access-token': this.session.data.authenticated['access-token'],
-        'token-type': 'Bearer',
         client: this.session.data.authenticated['client'],
-        expiry: this.session.data.authenticated['expiry'],
         uid: this.session.data.authenticated['uid'],
       };
     } else {
