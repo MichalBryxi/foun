@@ -11,22 +11,16 @@ export default class LoginController extends Controller {
   @service router;
 
   model = {
-    identification: '',
+    email: '',
     password: '',
   };
 
   @action
-  async authenticate(data) {
-    let { identification, password } = data;
+  async authenticate({ email, password }) {
     try {
-      await this.session.authenticate(
-        'authenticator:devise',
-        identification,
-        password
-      );
+      await this.session.authenticate('authenticator:token', email, password);
     } catch (error) {
-      console.log({ error });
-      this.notifications.add(error.error || error);
+      this.notifications.add(error.status);
     }
   }
 }
