@@ -6,6 +6,7 @@ gem 'jsonapi-resources'
 gem 'devise'
 gem 'devise_token_auth'
 gem 'puma'
+gem 'rails-i18n'
 
 gem 'rack-cors'
 gem 'awesome_nested_set'
