@@ -22,6 +22,14 @@ gem install ffi -v '1.9.21' -- --with-cflags="-Wno-error=implicit-function-decla
 bundle
 ```
 
+Mailcatcher:
+```sh
+brew install mailcatcher
+brew services restart mailcatcher
+```
+
+And then go to: [http://127.0.0.1:1080/](http://127.0.0.1:1080/)
+
 Backend & database are running inside a docker image:
 
 ```sh
