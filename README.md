@@ -2,7 +2,6 @@
 
 Automated invoice splitting for Czech phone carrier operators.
 
-![Foun accounts screen](docs/foun.png)
 
 ## Backend
 
@@ -21,6 +20,14 @@ rbenv init
 gem install ffi -v '1.9.21' -- --with-cflags="-Wno-error=implicit-function-declaration"
 bundle
 ```
+
+Mailcatcher:
+```sh
+brew install mailcatcher
+brew services restart mailcatcher
+```
+
+And then go to: [http://127.0.0.1:1080/](http://127.0.0.1:1080/)
 
 Backend & database are running inside a docker image:
 
@@ -82,3 +89,17 @@ railway shell
 # select "backend"
 > rails db:reset
 ```
+
+## Screenshots
+
+### Accounts screen
+![Foun accounts screen](docs/accounts.png)
+
+### Invoice import screen
+![Foun import screen](docs/import.png)
+
+### Invoice details screen
+![Foun invoice screen](docs/invoice.png)
+
+### Notification email
+![Foun email](docs/email.png)

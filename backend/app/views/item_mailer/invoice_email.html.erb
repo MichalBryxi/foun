@@ -1,6 +1,6 @@
-<h1 style="color: #174630"><%= @subject %></h1>
+<h1 style="color: #264653"><%= @subject %></h1>
 
-<h2 style="color: #177d4d">Informace o platbě</h2>  
+<h2 style="color: #e76f51">Informace o platbě</h2>  
 
 <table width="100%" cellspacing="10">
   <tbody>
@@ -19,7 +19,7 @@
   </tbody>
 </table>
 
-<h2 style="color: #177d4d">Detaily</h2>
+<h2 style="color: #e76f51">Detaily</h2>
 
 <table width="100%" cellspacing="10">
   <tbody>
@@ -37,3 +37,9 @@
     </tr>
   </tbody>
 </table>
+
+<% if @qr_code %>
+  <h2 style="color: #e76f51">QR platba</h2>
+
+  <img src="<%= @qr_code %>" />
+<% end %>
