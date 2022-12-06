@@ -2,7 +2,6 @@
 
 Automated invoice splitting for Czech phone carrier operators.
 
-![Foun accounts screen](docs/foun.png)
 
 ## Backend
 
@@ -90,3 +89,17 @@ railway shell
 # select "backend"
 > rails db:reset
 ```
+
+## Screenshots
+
+### Accounts screen
+![Foun accounts screen](docs/accounts.png)
+
+### Invoice import screen
+![Foun import screen](docs/import.png)
+
+### Invoice details screen
+![Foun invoice screen](docs/invoice.png)
+
+### Notification email
+![Foun email](docs/email.png)
