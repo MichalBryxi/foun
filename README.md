@@ -90,17 +90,25 @@ railway shell
 > rails db:reset
 ```
 
+## Mailing
+
 ### Mailing service
 
-- We use [SendGrid](https://app.sendgrid.com/)
-- Configured through [SMTP gateway](https://docs.sendgrid.com/for-developers/sending-email/rubyonrails)
+- We use [Mailgun](https://app.mailgun.com/)
+
+### Mailing templates
+
+- For templates we use [befree](https://pro.beefree.io/)
+- Because `befree` does not allow erb tags (`<%=` and `%>`) we need to do some replacements:
+  - Find `{{`, replace with: `<%=`
+  - Find `}}`, replace with: `%>`
 
 ### ENV variables
 
 ```sh
 RAILS_ENV=production # to build production version of the app
 SECRET_KEY_BASE=xxx  # verify the integrity of signed cookies
-SENDGRID_API_KEY=xxx # for sending emails
+MAILGUN_API_KEY=xxx  # Mailgun API key
 PGDATABASE=xxx       # PostgreSQL db
 PGUSER=xxx           # PostgreSQL user
 PGPASSWORD=xxx       # PostgreSQL password

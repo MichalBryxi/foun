@@ -85,13 +85,11 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
-  config.action_mailer.smtp_settings = {
-    user_name: 'apikey',
-    password: ENV['SENDGRID_API_KEY'],
-    domain: 'foun.pudr.com',
-    address: 'smtp.sendgrid.net',
-    port: 587,
-    authentication: :plain,
-    enable_starttls_auto: true
+
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+    api_key: ENV['MAILGUN_API_KEY'],
+    domain: 'mailgun.pudr.com',
+    api_host: 'api.mailgun.net'
   }
 end
