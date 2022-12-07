@@ -10,7 +10,7 @@ class Item < ApplicationRecord
   
   before_save { |item|
     if (item.notification_count_was != item.notification_count) and (item.account.email)
-      ItemMailer.invoice_email(item).deliver
+      ItemMailer.invoice_email(item).deliver_now
     end
   } 
   

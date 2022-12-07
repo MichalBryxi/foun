@@ -2,7 +2,8 @@ class ItemMailer < ApplicationMailer
   def invoice_email(item)
     @item = item
     @email = @item.account.email
-    @subject = "foun za #{l @item.invoice.issued_at.to_date, format: :long}"
+    @date = l @item.invoice.issued_at.to_date, format: :long
+    @subject = "foun za #{@date}"
     @variable_number = @item.account.phone_number
     @parent = @item.account.parent
     @account_number = "Nevyplněno"
