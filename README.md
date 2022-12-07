@@ -13,6 +13,8 @@ cd backend
 
 ### Installation
 
+#### Local rails
+
 To be able to run commands like `rails c` locally:
 ```sh
 brew install rbenv
@@ -21,7 +23,8 @@ gem install ffi -v '1.9.21' -- --with-cflags="-Wno-error=implicit-function-decla
 bundle
 ```
 
-Mailcatcher:
+#### Mailcatcher
+
 ```sh
 brew install mailcatcher
 brew services restart mailcatcher
@@ -79,7 +82,7 @@ Hosted on [railway](https://railway.app/)
 ```sh
 brew install railwayapp/tap/nixpacks
 brew install railway
-brew login
+railway login
 ```
 
 ### Database seed
