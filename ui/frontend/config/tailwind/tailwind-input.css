@@ -8,7 +8,7 @@
 
 /* CSS specificity trick to fix hardcoded styles of ember-table */
 div > .ember-table > .ember-table-overflow {
-  @apply overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg;
+  @apply overflow-x-scroll overflow-y-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg;
 }
 
 .ember-table > .ember-table-overflow > table {
