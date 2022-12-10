@@ -45,6 +45,12 @@ export default class FooController extends Controller {
   get columns() {
     return [
       {
+        name: this.intl.t('model.account.depth'),
+        valuePath: 'depth',
+        cellComponent: 'data-grid/cell/depth',
+        width: 150,
+      },
+      {
         name: this.intl.t('model.account.name'),
         valuePath: 'name',
         cellComponent: 'data-grid/cell/link-to',

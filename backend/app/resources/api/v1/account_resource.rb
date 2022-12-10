@@ -1,7 +1,7 @@
 module Api
   module V1
     class AccountResource < ApplicationResource
-      attributes :phone_number, :name, :email, :lft, :rgt, :account_number
+      attributes :phone_number, :name, :email, :lft, :rgt, :account_number, :depth, :children_count
       
       has_one :parent, class_name: 'Account'
       

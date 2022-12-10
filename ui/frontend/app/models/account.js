@@ -7,8 +7,10 @@ export default class AccountModel extends Model {
   @attr('string', { defaultValue: 'john.doe@example.com' }) email;
   @attr('string') facebookUserId;
 
-  @attr('number', { defaultValue: 0 }) lft;
-  @attr('number', { defaultValue: 0 }) rgt;
+  @attr() lft;
+  @attr() rgt;
+  @attr() depth;
+  @attr() childrenCount;
 
   @belongsTo('account', { inverse: 'children' }) parent;
   @hasMany('account', { inverse: 'parent' }) children;
