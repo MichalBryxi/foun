@@ -1,9 +1,9 @@
-// import {
-//   validatePresence,
-//   validateFormat,
-// } from 'ember-changeset-validations/validators';
+import {
+  validatePresence,
+  validateDate,
+} from 'ember-changeset-validations/validators';
 
 export default {
-  source: [],
-  issuedAt: [],
+  source: [validatePresence(true)],
+  issuedAt: [validatePresence(true), validateDate()],
 };

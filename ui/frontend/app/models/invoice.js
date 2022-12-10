@@ -12,9 +12,9 @@ export default class InvoiceModel extends Model {
   })
   issuedAt;
   get issuedAtString() {
-    return this.issuedAt.toISOString().replace(/:\d+.\d+Z$/, '');
+    return this.issuedAt.toISOString().replace(/T.*$/, '');
   }
   set issuedAtString(newDate) {
-    this.issuedAt = new Date(`${newDate}:00.000Z`);
+    this.issuedAt = new Date(newDate);
   }
 }

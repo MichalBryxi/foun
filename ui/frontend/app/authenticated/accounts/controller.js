@@ -50,18 +50,22 @@ export default class FooController extends Controller {
         cellComponent: 'data-grid/cell/link-to',
         route: 'authenticated.account',
         model: 'id',
+        width: 250,
       },
       {
         name: this.intl.t('model.account.email'),
         valuePath: 'email',
+        width: 250,
       },
       {
         name: this.intl.t('model.account.phoneNumber'),
         valuePath: 'phoneNumber',
+        width: 200,
       },
       {
         name: this.intl.t('model.account.accountNumber'),
         valuePath: 'accountNumber',
+        width: 200,
       },
     ];
   }

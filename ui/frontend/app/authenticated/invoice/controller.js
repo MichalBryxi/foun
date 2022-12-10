@@ -40,6 +40,7 @@ export default class InvoiceController extends Controller {
       {
         name: this.intl.t('model.account.name'),
         valuePath: 'account.name',
+        width: 250,
       },
       {
         name: this.intl.t('model.invoice.price'),

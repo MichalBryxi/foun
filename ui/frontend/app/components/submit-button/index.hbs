@@ -1,0 +1,12 @@
+<Button
+  @type='submit'
+  @intent='primary'
+  class='flex items-center justify-center gap-2'
+  disabled={{or @changeset.isInvalid @task.isRunning}}
+>
+  {{#if @task.isRunning}}
+    <HeroIcon @icon='arrow-path' class='h-4' />
+  {{/if}}
+
+  {{t 'submit'}}
+</Button>
