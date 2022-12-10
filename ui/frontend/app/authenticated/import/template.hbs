@@ -3,7 +3,7 @@
   as |changeset|
 }}
   <ChangesetForm
-    @onSubmit={{this.parseInvoice}}
+    @onSubmit={{perform this.parseInvoice}}
     @changeset={{changeset}}
     class='grid gap-4'
     as |Form|
@@ -14,8 +14,6 @@
       type='date'
     />
     <Form.Textarea @label={{t 'model.invoice.source'}} @fieldName='source' />
-    <Button @type='submit' @intent='primary' disabled={{changeset.isInvalid}}>
-      {{t 'submit'}}
-    </Button>
+    <SubmitButton @changeset={{changeset}} @task={{this.parseInvoice}} />
   </ChangesetForm>
 {{/let}}

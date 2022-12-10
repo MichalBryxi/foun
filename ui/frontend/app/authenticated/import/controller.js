@@ -1,8 +1,8 @@
 import Controller from '@ember/controller';
 import InvoiceValidations from 'foun/validations/invoice';
-import { action } from '@ember/object';
 import PapaParse from 'papaparse';
 import { inject as service } from '@ember/service';
+import { task } from 'ember-concurrency';
 
 export default class AuthenticatedImportController extends Controller {
   @service store;
@@ -12,8 +12,7 @@ export default class AuthenticatedImportController extends Controller {
 
   InvoiceValidations = InvoiceValidations;
 
-  @action
-  async parseInvoice() {
+  parseInvoice = task({ drop: true }, async () => {
     const invoice = this.model.newInvoice;
     const { accounts } = this.model;
     let okCount = 0;
@@ -58,5 +57,5 @@ export default class AuthenticatedImportController extends Controller {
     );
 
     this.router.transitionTo('authenticated.invoice', invoice.id);
-  }
+  });
 }
