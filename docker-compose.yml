@@ -1,8 +1,8 @@
 version: '2'
 services:
   db:
-    environment:
-      POSTGRES_PASSWORD: bluestaminauponreflection
+    env_file: 
+      - ./backend/.env
     image: postgres
     ports:
       - "5432:5432"
