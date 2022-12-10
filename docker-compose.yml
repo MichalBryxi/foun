@@ -2,7 +2,7 @@ version: '2'
 services:
   db:
     env_file: 
-      - ./backend/.env
+      - ./backend/.env.development
     image: postgres
     ports:
       - "5432:5432"
