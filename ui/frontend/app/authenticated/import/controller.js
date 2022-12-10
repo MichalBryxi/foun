@@ -1,6 +1,5 @@
 import Controller from '@ember/controller';
 import InvoiceValidations from 'foun/validations/invoice';
-import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import PapaParse from 'papaparse';
 import { inject as service } from '@ember/service';
