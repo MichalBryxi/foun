@@ -1635,6 +1635,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@embroider/addon-shim@npm:1.8.3":
+  version: 1.8.3
+  resolution: "@embroider/addon-shim@npm:1.8.3"
+  dependencies:
+    "@embroider/shared-internals": ^1.8.3
+    semver: ^7.3.5
+  checksum: 11dfdb956631179656727599eb6d6223369f6a04f0e28ac04b793064338c577a89a77c59254a4a665acc46e174cf87196d0f335ab8049be7fe8a2c71ef695974
+  languageName: node
+  linkType: hard
+
 "@embroider/addon-shim@npm:^1.5.0, @embroider/addon-shim@npm:^1.8.0, @embroider/addon-shim@npm:^1.8.3":
   version: 1.8.4
   resolution: "@embroider/addon-shim@npm:1.8.4"
@@ -1773,7 +1783,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@embroider/shared-internals@npm:1.8.3, @embroider/shared-internals@npm:^1.0.0":
+"@embroider/shared-internals@npm:1.8.3, @embroider/shared-internals@npm:^1.0.0, @embroider/shared-internals@npm:^1.8.3":
   version: 1.8.3
   resolution: "@embroider/shared-internals@npm:1.8.3"
   dependencies:
@@ -8497,7 +8507,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-cli-htmlbars@npm:^6.0.0, ember-cli-htmlbars@npm:^6.0.1, ember-cli-htmlbars@npm:^6.1.1":
+"ember-cli-htmlbars@npm:^6.0.0, ember-cli-htmlbars@npm:^6.0.1, ember-cli-htmlbars@npm:^6.1.0, ember-cli-htmlbars@npm:^6.1.1":
   version: 6.1.1
   resolution: "ember-cli-htmlbars@npm:6.1.1"
   dependencies:
@@ -8934,6 +8944,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ember-concurrency@npm:2.2.1":
+  version: 2.2.1
+  resolution: "ember-concurrency@npm:2.2.1"
+  dependencies:
+    "@glimmer/tracking": ^1.0.4
+    ember-cli-babel: ^7.26.6
+    ember-cli-htmlbars: ^5.7.1
+    ember-compatibility-helpers: ^1.2.0
+    ember-destroyable-polyfill: ^2.0.2
+  checksum: 23627a12ecce3ffa8d9785bc75a9373915c1f08e93e548df2a654f5342e7477a3f2b195fdb1a8ee7d29cbb2aa9640b29d8b8f1723ee742ee797c1ac11d2e0477
+  languageName: node
+  linkType: hard
+
 "ember-concurrency@npm:>=1.0.0 <3, ember-concurrency@npm:^2.3.7":
   version: 2.3.7
   resolution: "ember-concurrency@npm:2.3.7"
@@ -9189,7 +9212,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-modifier@npm:^2.1.2 || ^3.1.0 || ^4.0.0, ember-modifier@npm:^3.0.0":
+"ember-modifier@npm:3.2.7, ember-modifier@npm:^2.1.2 || ^3.1.0 || ^4.0.0, ember-modifier@npm:^3.0.0":
   version: 3.2.7
   resolution: "ember-modifier@npm:3.2.7"
   dependencies:
@@ -9301,6 +9324,19 @@ __metadata:
     "@babel/traverse": ^7.4.5
     recast: ^0.18.1
   checksum: e163e0d68e49a942658aee7c05638dd5c2db939753b51efc9c6d9f0e582953be185daf4cdd569c1b8a35ed47f35f4cb18067a6a1db68e135d7464bbad6ef9d93
+  languageName: node
+  linkType: hard
+
+"ember-safe-button@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "ember-safe-button@npm:3.0.0"
+  dependencies:
+    "@ember/render-modifiers": 2.0.4
+    "@embroider/addon-shim": 1.8.3
+    ember-cli-htmlbars: ^6.1.0
+    ember-concurrency: 2.2.1
+    ember-modifier: 3.2.7
+  checksum: a132068f8659ac6035f213cf62198f48a1d8e8efea82ea8941dc967ccf7f53388705d6a553fc37e9f9453d3dacba9ba50d7e09414449fb8e67eb1ed16faf39d0
   languageName: node
   linkType: hard
 
@@ -11005,6 +11041,7 @@ __metadata:
     ember-papaparse: ^1.0.0
     ember-qunit: ^6.0.0
     ember-resolver: ^8.0.3
+    ember-safe-button: ^3.0.0
     ember-simple-auth-token: ^5.3.1
     ember-source: ~4.8.0
     ember-table: ^5.0.0

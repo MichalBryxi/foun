@@ -1,3 +1,7 @@
 <DataGrid @columns={{this.columns}} @rows={{this.rows}} as |dg|>
+  <dg.ActionBar as |ab|>
+    <ab.SafeButton @onClick={{this.delete}} @message={{t 'delete'}} />
+
+  </dg.ActionBar>
   <dg.Table />
 </DataGrid>
