@@ -1,14 +1,16 @@
 <DataGrid @columns={{this.columns}} @rows={{this.rows}} as |dg|>
   <dg.ActionBar as |ab|>
-    <ab.Button @onClick={{fn this.togglePaid true}} @intent='primary'>
-      {{t 'invoice.markPaid'}}
-    </ab.Button>
-    <ab.Button @onClick={{fn this.togglePaid false}} @intent='warning'>
-      {{t 'invoice.markNotPaid'}}
-    </ab.Button>
-    <ab.Button @onClick={{this.sendEmail}}>
-      {{t 'invoice.sendEmail'}}
-    </ab.Button>
+    <ab.Selection as |se|>
+      <se.Button @onClick={{fn this.togglePaid true}} @intent='primary'>
+        {{t 'invoice.markPaid'}}
+      </se.Button>
+      <se.Button @onClick={{fn this.togglePaid false}} @intent='warning'>
+        {{t 'invoice.markNotPaid'}}
+      </se.Button>
+      <se.Button @onClick={{this.sendEmail}}>
+        {{t 'invoice.sendEmail'}}
+      </se.Button>
+    </ab.Selection>
   </dg.ActionBar>
 
   <dg.Table />
