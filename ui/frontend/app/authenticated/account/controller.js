@@ -2,21 +2,14 @@ import Controller from '@ember/controller';
 import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
 
-export default class FooController extends Controller {
+export default class AccountController extends Controller {
   @service notifications;
   @service intl;
+  @service router;
 
   @action
-  saveAccount(account) {
-    account
-      .save()
-      .then(() => {
-        let message = this.intl.t('account.saved');
-        this.notifications.add(message);
-      })
-      .catch((err) => {
-        let message = this.intl.t('account.saveError');
-        this.notifications.add(`${message}: ${err.message}`);
-      });
+  async saveAccount() {
+    this.notifications.add(this.intl.t('saved'));
+    this.router.transitionTo('authenticated.accounts');
   }
 }

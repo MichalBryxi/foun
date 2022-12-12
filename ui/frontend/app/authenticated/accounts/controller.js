@@ -12,7 +12,7 @@ export default class AccountsController extends Controller {
   async createAccount() {
     let account = this.store.createRecord('account');
     await account.save();
-    this.router.transitionTo('account', account.id);
+    this.router.transitionTo('authenticated.account', account.id);
   }
 
   @action
