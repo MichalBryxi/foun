@@ -23,23 +23,13 @@ export default class FooController extends Controller {
       });
   }
 
-  // TODO
   @action
-  delete() {
-    let account = this.accountToDelete;
-    account.deleteRecord();
-    account
-      .save()
-      .then(() => {
-        let message = this.intl.t('accounts.successDelete');
-        this.notifications.add(message);
-      })
-      .catch((err) => {
-        let message = this.intl.t('accounts.cannotDelete');
-        this.notifications.add(`${message}: ${err.message}`);
-      });
+  async deleteAccount(accounts) {
+    for (const account of accounts) {
+      await account.destroyRecord();
+    }
 
-    return true;
+    this.notifications.add(this.intl.t('deleted'));
   }
 
   get columns() {

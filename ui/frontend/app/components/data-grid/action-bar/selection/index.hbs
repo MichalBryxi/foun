@@ -1,0 +1,22 @@
+<div class='flex flex-wrap gap-4'>
+  <FormCheckbox
+    @label={{t 'selectAll'}}
+    @checked={{this.isSelectAllChecked}}
+    @onChange={{@selectAll}}
+  />
+
+  {{yield
+    (hash
+      Button=(component
+        'data-grid/action-bar/selection/button'
+        areActionsDisabled=this.areActionsDisabled
+        selection=@selection
+      )
+      SafeButton=(component
+        'data-grid/action-bar/selection/safe-button'
+        selection=@selection
+        areActionsDisabled=this.areActionsDisabled
+      )
+    )
+  }}
+</div>

@@ -1,20 +1,12 @@
-<div class='flex flex-wrap gap-4 md:px-6 lg:px-8'>
-  <FormCheckbox
-    @label={{t 'selectAll'}}
-    @checked={{this.isSelectAllChecked}}
-    @onChange={{@selectAll}}
-  />
+<div class='flex flex-wrap justify-between gap-4 md:px-6 lg:px-8'>
   {{yield
     (hash
-      Button=(component
-        'data-grid/action-bar/button'
-        areActionsDisabled=this.areActionsDisabled
+      Selection=(component
+        'data-grid/action-bar/selection'
         selection=@selection
+        selectAll=@selectAll
       )
-      SafeButton=(component
-        'data-grid/action-bar/safe-button'
-        selection=@selection
-      )
+      Single=(component 'data-grid/action-bar/single')
     )
   }}
 </div>

@@ -1,7 +1,15 @@
 <DataGrid @columns={{this.columns}} @rows={{this.rows}} as |dg|>
   <dg.ActionBar as |ab|>
-    <ab.SafeButton @onClick={{this.delete}} @message={{t 'delete'}} />
-
+    <ab.Selection as |se|>
+      <se.Button @onClick={{this.deleteAccount}} @intent='danger'>
+        {{t 'delete'}}
+      </se.Button>
+    </ab.Selection>
+    <ab.Single as |si|>
+      <si.Button @onClick={{this.createAccount}} @intent='success'>
+        {{t 'new'}}
+      </si.Button>
+    </ab.Single>
   </dg.ActionBar>
   <dg.Table />
 </DataGrid>

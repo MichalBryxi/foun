@@ -2,6 +2,7 @@
   {{on 'click' (fn @onClick @selection)}}
   disabled={{if @areActionsDisabled 'disabled' ''}}
   @intent={{@intent}}
+  ...attributes
 >
   {{yield}}
 </Button>

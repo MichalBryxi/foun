@@ -1,7 +1,9 @@
 {
   "save": "Uložit",
+  "new": "Přidat",
   "submit": "Odeslat",
   "delete": "Odstranit",
   "selectAll": "Vybrat vše",
-  "empty": "Žádná data k dispozici"
+  "empty": "Žádná data k dispozici",
+  "deleted": "Smazáno"
 }

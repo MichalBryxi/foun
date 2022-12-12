@@ -1,0 +1,8 @@
+{{! TODO: Will need to implement @disabled to EmberSafeButton }}
+{{#unless @areActionsDisabled}}
+  <SafeButton
+    @message={{@message}}
+    @onConfirm={{fn @onClick @selection}}
+    disabled={{true}}
+  />
+{{/unless}}
