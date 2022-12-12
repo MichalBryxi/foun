@@ -1,6 +1,6 @@
 {{#let (changeset this.model.account this.AccountValidations) as |changeset|}}
   <ChangesetForm
-    @onSubmit={{this.save}}
+    @onSubmit={{this.saveAccount}}
     @changeset={{changeset}}
     class='grid gap-4'
     as |Form|

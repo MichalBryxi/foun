@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_05_071554) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_12_195358) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,6 +24,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_05_071554) do
     t.integer "rgt", default: 0, null: false
     t.string "account_number", default: "", null: false
     t.integer "parent_id"
+    t.integer "depth", default: 0, null: false
+    t.integer "children_count", default: 0, null: false
     t.index ["lft"], name: "index_accounts_on_lft"
     t.index ["rgt"], name: "index_accounts_on_rgt"
   end

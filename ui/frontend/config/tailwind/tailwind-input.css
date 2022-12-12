@@ -38,3 +38,15 @@ div > .ember-table > .ember-table-overflow {
 .ember-table .et-cell-content {
   @apply inline;
 }
+
+.ember-safe-button {
+
+  @apply rounded-md w-1/5 h-12 block overflow-hidden relative focus-within:ring-4 ring-opacity-50 ring-blue-500;
+}
+.ember-safe-button-trigger {
+  @apply rounded-md py-2 w-full h-full block absolute left-0 top-0 focus:outline-none font-semibold text-white bg-blue-500;
+
+}
+.ember-safe-button-safety {
+   @apply rounded-md py-2 w-full h-full block absolute left-0 top-0 focus:outline-none font-semibold text-white bg-red-600;
+}

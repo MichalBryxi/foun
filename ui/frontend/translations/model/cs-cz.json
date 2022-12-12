@@ -5,7 +5,8 @@
       "email": "E-mail",
       "phoneNumber": "Telefonní číslo",
       "accountNumber": "Číslo účtu",
-      "parent": "Rodič"
+      "parent": "Rodič",
+      "depth": "Hloubka"
     },
     "invoice": {
       "date": "Datum",
