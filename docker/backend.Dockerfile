@@ -16,6 +16,3 @@ WORKDIR /myapp
 
 ADD backend/Gemfile backend/Gemfile.lock /myapp/
 RUN bundle install
-
-
-
