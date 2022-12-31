@@ -131,3 +131,4 @@ PGHOST=xxx           # PostgreSQL host
 
 ### Notification email
 ![Foun email](docs/email.png)
+
