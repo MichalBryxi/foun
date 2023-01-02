@@ -1,6 +1,10 @@
 {{#if @rows}}
   <EmberTable as |t|>
-    <t.head @columns={{@columns}} />
+    <t.head
+      @sorts={{@sorts}}
+      @onUpdateSorts={{@onUpdateSorts}}
+      @columns={{@columns}}
+    />
 
     <t.body
       @enableTree={{false}}
