@@ -26,7 +26,7 @@ class ItemMailer < ApplicationMailer
         qp['bankCode'] = parts[1]
       end
 
-      qp['amount'] = @item.price
+      qp['amount'] = @item.pay_up
       qp['currency'] = 'CZK'
       qp['vs'] = @variable_number
       qp['message'] = @subject
