@@ -2,6 +2,7 @@ import Component from '@glimmer/component';
 
 export default class DataGridCellDepthComponent extends Component {
   get indentation() {
-    return [...Array(this.args.row.rowValue.depth).keys()];
+    if (!this.args.row.cellValue) return [];
+    return [...Array(this.args.row.cellValue).keys()];
   }
 }

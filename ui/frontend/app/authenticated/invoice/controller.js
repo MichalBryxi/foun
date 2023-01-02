@@ -38,6 +38,11 @@ export default class InvoiceController extends Controller {
   get columns() {
     return [
       {
+        name: this.intl.t('model.account.depth'),
+        valuePath: 'account.depth',
+        cellComponent: 'data-grid/cell/depth',
+      },
+      {
         name: this.intl.t('model.account.name'),
         valuePath: 'account.name',
         width: 250,
