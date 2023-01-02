@@ -4,7 +4,7 @@ class ItemMailer < ApplicationMailer
     @email = @item.account.email
     @date = l @item.invoice.issued_at.to_date, format: :long
     @subject = "foun za #{@date}"
-    @variable_number = @item.account.phone_number
+    @variable_number = @item.account.phone_number.delete_prefix('420')
     @parent = @item.account.parent
     @account_number = "Nevyplněno"
     @parent_name = "Nevyplněno"
