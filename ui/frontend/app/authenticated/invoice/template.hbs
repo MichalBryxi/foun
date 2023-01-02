@@ -1,4 +1,9 @@
-<DataGrid @columns={{this.columns}} @rows={{this.rows}} as |dg|>
+<DataGrid
+  @columns={{this.columns}}
+  @rows={{this.rows}}
+  @footerRows={{this.footerRows}}
+  as |dg|
+>
   <dg.ActionBar as |ab|>
     <ab.Selection as |se|>
       <se.Button @onClick={{fn this.togglePaid true}} @intent='primary'>

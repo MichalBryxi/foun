@@ -1,0 +1,8 @@
+{{#if @row.cellValue}}
+  {{format-number
+    @row.cellValue
+    style='currency'
+    currency='CZK'
+    maximumFractionDigits=2
+  }}
+{{/if}}
