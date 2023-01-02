@@ -20,11 +20,39 @@
               {{/if}}
             {{/component}}
           {{else}}
-            {{cell}}
+            {{#if column.valueFormatter}}
+              {{column.valueFormatter cell}}
+            {{else}}
+              {{cell}}
+            {{/if}}
           {{/if}}
         </r.cell>
       </b.row>
     </t.body>
+
+    {{#if @footerRows}}
+      <t.foot @rows={{@footerRows}} as |f|>
+        <f.row as |r|>
+          <r.cell as |cell column|>
+            {{#if column.cellComponent}}
+              {{#component column.cellComponent row=r column=column}}
+                {{#if column.valueFormatter}}
+                  {{column.valueFormatter cell}}
+                {{else}}
+                  {{cell}}
+                {{/if}}
+              {{/component}}
+            {{else}}
+              {{#if column.valueFormatter}}
+                {{column.valueFormatter cell}}
+              {{else}}
+                {{cell}}
+              {{/if}}
+            {{/if}}
+          </r.cell>
+        </f.row>
+      </t.foot>
+    {{/if}}
   </EmberTable>
 {{else}}
   <div class='text-center'>

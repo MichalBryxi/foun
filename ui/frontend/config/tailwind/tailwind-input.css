@@ -27,7 +27,7 @@ div > .ember-table > .ember-table-overflow {
   @apply divide-y divide-gray-200 bg-white;
 }
 
-.ember-table tbody td {
+.ember-table tbody td, .ember-table tfoot td {
   @apply whitespace-nowrap px-3 py-4 text-sm text-gray-500;
 }
 
