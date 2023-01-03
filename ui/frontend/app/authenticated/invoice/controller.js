@@ -7,7 +7,7 @@ export default class InvoiceController extends Controller {
   @service notifications;
   @service intl;
 
-  @tracked sorts;
+  @tracked sorts = [{ valuePath: 'account.depth', isAscending: true }];
 
   @action
   async togglePaid(newValue, selection) {

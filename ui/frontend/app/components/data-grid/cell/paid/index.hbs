@@ -1,5 +1,7 @@
-{{#if @row.rowValue.isPaid}}
-  <HeroIcon @icon='check-circle' class='w-6 stroke-green-700' />
-{{else}}
-  <HeroIcon @icon='x-mark' class='w-6 stroke-red-700' />
+{{#if (not (is-empty @row.cellValue))}}
+  {{#if @row.cellValue}}
+    <HeroIcon @icon='check-circle' class='w-6 stroke-green-700' />
+  {{else}}
+    <HeroIcon @icon='x-mark' class='w-6 stroke-red-700' />
+  {{/if}}
 {{/if}}
