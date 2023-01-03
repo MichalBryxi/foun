@@ -3,7 +3,7 @@
   @rows={{this.rows}}
   @footerRows={{this.footerRows}}
   @sorts={{this.sorts}}
-  @onUpdateSorts={{action (mut this.sorts)}}
+  @onUpdateSorts={{fn (mut this.sorts)}}
   as |dg|
 >
   <dg.ActionBar as |ab|>
