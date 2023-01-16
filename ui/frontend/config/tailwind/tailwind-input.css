@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .ember-table {
-  @apply inline-block min-w-full py-2 align-middle md:px-6 lg:px-8
+  @apply inline-block min-w-full py-2 align-middle
 }
 
 /* CSS specificity trick to fix hardcoded styles of ember-table */
