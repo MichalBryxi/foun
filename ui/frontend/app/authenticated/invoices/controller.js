@@ -1,8 +1,10 @@
 import Controller from '@ember/controller';
 import { inject as service } from '@ember/service';
+import { action } from '@ember/object';
 
 export default class InvoicesController extends Controller {
   @service intl;
+  @service notifications;
 
   get columns() {
     return [
@@ -19,5 +21,13 @@ export default class InvoicesController extends Controller {
 
   get rows() {
     return this.model;
+  }
+
+  @action
+  async deleteInvoices(invoices) {
+    for (let invoice of invoices) {
+      await invoice.destroyRecord();
+      this.notifications.add(this.intl.t('deleted'));
+    }
   }
 }

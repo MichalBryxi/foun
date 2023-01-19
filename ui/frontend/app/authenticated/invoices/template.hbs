@@ -5,5 +5,13 @@
   @selection={{this.selection}}
   as |dg|
 >
+  <dg.ActionBar as |ab|>
+    <ab.Selection as |se|>
+      <se.Button @onClick={{this.deleteInvoices}} @intent='danger'>
+        {{t 'delete'}}
+      </se.Button>
+    </ab.Selection>
+  </dg.ActionBar>
+
   <dg.Table />
 </DataGrid>
