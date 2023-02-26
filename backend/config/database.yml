@@ -13,7 +13,6 @@ production:
 
 development:
   <<: *default
-  database: foun
 
 test:
   <<: *default
