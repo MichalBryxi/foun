@@ -72,3 +72,4 @@ node_modules/
 /.pgdb
 /backend/log/
 /**/.DS_Store
+/**.sql
