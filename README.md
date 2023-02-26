@@ -93,6 +93,17 @@ railway shell
 > rails db:reset
 ```
 
+### Pulling db data from production
+
+1. First create & configure environment variables
+```sh
+cp ./backend/_template.env.development ./backend/.env.production
+```
+2. Run the pull shell script
+```sh
+./bin/database_pull.sh
+```
+
 ## Mailing
 
 ### Mailing service
@@ -116,6 +127,7 @@ PGDATABASE=xxx       # PostgreSQL db
 PGUSER=xxx           # PostgreSQL user
 PGPASSWORD=xxx       # PostgreSQL password
 PGHOST=xxx           # PostgreSQL host
+PGPORT=xxx           # PostgreSQL port
 ```
 
 ## Screenshots
