@@ -48,7 +48,10 @@ export default class AuthenticatedImportController extends Controller {
           );
         }
       } else {
-        this.intl.t('import.new.error.accountNotFound', { phoneNumber });
+        this.notifications.add(
+          this.intl.t('import.new.error.accountNotFound', { phoneNumber }),
+          { appearance: 'error', preserve: true }
+        );
       }
     }
 
